@@ -71,7 +71,7 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container position-relative">
-        <h1>RA13 Diferencia els conceptes de codi font, objecte i executable.</h1>
+        <h1>RA13 Diferència els conceptes de codi font, objecte i executable.</h1>
         <!-- <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
         <nav class="breadcrumbs">
           <ol>
@@ -84,86 +84,93 @@
 
     <!-- Featured Services Section -->
 
-    <section class="intro">
-      <div class="container">
-          <h2>Introducció al Desenvolupament d'un Programa Informàtic</h2>
-          <p>El desenvolupament d'un programa informàtic passa per diverses etapes, cada una de les quals està relacionada amb la transformació de les idees i especificacions en codi executable. En aquest procés, hi intervenen diferents conceptes i eines que ajuden a transformar la nostra visió en un programa funcional. Alguns dels conceptes més importants són el <strong>codi font</strong>, el <strong>codi objecte</strong> i l'<strong>executable</strong>.</p>
-      </div>
-  </section>
-
   <section class="concepts">
       <div class="container">
-          <h2>Conceptes Clau en el Desenvolupament d'un Programa</h2>
+
+        <div class="concept">
+          <h2>Introducció al Desenvolupament d'un Programa Informàtic</h2>
+<p>En el desenvolupament de programari, un programa passa per diverses etapes abans de poder ser executat per un ordinador. Aquest procés inclou la creació del codi font, la seva conversió en codi objecte i, finalment, la generació d'un fitxer executable. A continuació, s'analitzen aquests tres conceptes en detall.</p>      </div>
+
+
+
 
           <div class="concept">
-              <h3>Codi Font</h3>
-              <p>El <strong>codi font</strong> és l'estructura inicial d'un programa informàtic escrita en un llenguatge de programació de nivell alt. Aquest codi és comprensible per als humans i serveix com la base de tot el programa. Els llenguatges de programació com Python, Java, C++ i JavaScript són exemples de llenguatges en què es pot escriure codi font.</p>
-
-              <p>El codi font és, bàsicament, el conjunt d'instruccions i lògica que un programador crea per definir el comportament del programa. Aquest codi es conserva en fitxers d'extensió específica segons el llenguatge emprat (per exemple, .java per a Java, .py per a Python, .cpp per a C++).</p>
-
-              <p>Els programadors utilitzen eines com editores de text o entorns de desenvolupament integrats (IDE) per escriure el codi font, i poden incloure llibreries externes o API per afegir funcionalitat addicional.</p>
-
-              <p>Exemple de codi font (en Python):</p>
-              <pre><code>
-# Exemple de codi font en Python
-def salutacio():
-  print("Hola, món!")
-  
-salutacio()
-              </code></pre>
-          </div>
-
-          <div class="concept">
-              <h3>Codi Objecte</h3>
-              <p>Un cop el codi font s'ha escrit, és necessari transformar-lo en codi que l'ordinador pugui entendre directament. Aquesta transformació es realitza a través d'un procés anomenat <strong>compilació</strong> (en llenguatges com C o C++) o <strong>interpretació</strong> (en llenguatges com Python). El resultat d'aquest procés és el <strong>codi objecte</strong>, una versió binària del programa que encara no és executable.</p>
-
-              <p>El codi objecte és un conjunt de codi que el processador de l'ordinador pot llegir, però encara no té la capacitat d'executar-lo per si mateix. Aquest codi es genera a partir del codi font mitjançant un compilador o intèrpret. El codi objecte es pot associar a arxius amb extensions com .obj (en C/C++) o .o.</p>
-
-              <p>El codi objecte conté instruccions en codi màquina, però no és complet per si sol. Es pot combinar amb altres codi objecte i biblioteques per formar el programa final.</p>
-
-              <p>Exemple de codi objecte: (es representa com a dades binàries i no és llegible directament pel programador). Normalment, ve en forma d'arxius amb extensió .obj o .o generats per un compilador.</p>
+            <h2>Codi Font</h2>
+            <p>El <strong>codi font</strong> és el conjunt d'instruccions escrites per un programador en un llenguatge de programació com C, Java, Python, etc. Aquest codi és llegible per humans i defineix la lògica i funcionalitat d'un programa.</p>
+            <p>Característiques principals del codi font:</p>
+            <ul>
+              <li>És llegible per humans.</li>
+              <li>Pot ser modificat i millorat fàcilment.</li>
+              <li>Es guarda en fitxers amb extensions com <code>.c</code>, <code>.java</code>, <code>.py</code>.</li>
+            </ul>
+            <p><strong>Exemple de codi font en C:</strong></p>
+            <pre><code>
+      #include &lt;stdio.h&gt;
+      int main() {
+          printf("Hola, món!\n");
+          return 0;
+      }
+            </code></pre>
           </div>
 
           <div class="concept">
-              <h3>Codi Executable</h3>
-              <p>Després de generar el codi objecte, és necessari realitzar un procés addicional anomenat <strong>enllaç (linking)</strong> per combinar tots els arxius de codi objecte en un sol arxiu executable. El resultat d'aquest procés és un <strong>executable</strong>, que és el fitxer final que es pot executar directament al sistema operatiu de l'usuari final.</p>
+            <h2>Codi Objecte</h2>
+            <p>El <strong>codi objecte</strong> és una versió binària del programa obtinguda després de la compilació del codi font. Tot i que és més proper al llenguatge màquina, encara no es pot executar directament sense ser enllaçat.</p>
+            <p>Característiques del codi objecte:</p>
+            <ul>
+              <li>És un conjunt d'instruccions en llenguatge màquina.</li>
+              <li>Necessita ser enllaçat amb altres fitxers per formar un executable.</li>
+              <li>Es guarda en fitxers amb extensions com <code>.o</code> o <code>.obj</code>.</li>
+            </ul>
+            <p><strong>Procés de compilació:</strong></p>
+            <p>Quan es compila el codi font d'un programa en C amb el compilador <code>gcc</code>, es genera un fitxer objecte:</p>
+            <pre><code>
+      gcc -c programa.c -o programa.o
+            </code></pre>
 
-              <p>L'arxiu executable conté el codi complet i preparat perquè el sistema operatiu el carregui i el faci funcionar. Aquest fitxer pot tenir extensions com .exe (en Windows) o no tenir extensió en sistemes Unix com Linux o macOS.</p>
-
-              <p>Una de les característiques més importants de l'executable és que, en contrast amb el codi font i el codi objecte, no es pot modificar ni llegir fàcilment, ja que està en un format binari que és comprensible només per l'ordinador. Un cop creat l'executable, el programa es pot executar sense necessitat de tenir accés al codi font original.</p>
-
-              <p>Exemple d'un arxiu executable en Windows: <strong>programa.exe</strong></p>
+          <div class="concept">
+            <h2>Fitxer Executable</h2>
+            <p>El <strong>fitxer executable</strong> és la versió final d'un programa que pot ser executada pel sistema operatiu. Es genera després d'enllaçar el codi objecte amb biblioteques necessàries.</p>
+            <p>Característiques dels executables:</p>
+            <ul>
+              <li>Conté totes les instruccions necessàries per ser executat.</li>
+              <li>El sistema operatiu pot carregar-lo directament.</li>
+              <li>Extensions habituals: <code>.exe</code> en Windows, sense extensió en Linux i macOS.</li>
+            </ul>
+            <p><strong>Generació de l'executable:</strong></p>
+            <pre><code>
+      gcc programa.o -o programa
+            </code></pre>
+            <br><br>
+            <img src="capturadiagrama.png" alt="diagrama">
+            <br><br>
           </div>
-      </div>
-  </section>
 
-  <section class="process">
-      <div class="container">
-          <h2>Procés de Desenvolupament d'un Programa Informàtic</h2>
-          <p>El procés de creació d'un programa informàtic segueix diverses etapes que inclouen el desenvolupament, la compilació i l'enllaç. A continuació, es detallen aquestes etapes:</p>
-          <ol>
-              <li><strong>Escriure el codi font:</strong> El programador crea el codi font que defineix la lògica del programa.</li>
-              <li><strong>Compilació:</strong> El compilador converteix el codi font en codi objecte. Aquesta etapa detecta errors sintàctics o lògics en el codi font.</li>
-              <li><strong>Enllaç (Linking):</strong> Els arxius de codi objecte es combinen amb llibreries externes per generar un programa complet.</li>
-              <li><strong>Creació de l'executable:</strong> El codi objecte es converteix en un fitxer executable que pot ser executat pel sistema operatiu.</li>
-          </ol>
-          <p>Un cop completat el procés, el programa està llest per ser distribuït i executat pels usuaris.</p>
-
-          <div class="image">
-              <img src="https://via.placeholder.com/600x300" alt="Procés de creació d'un programa informàtic" />
-              <p>Diagrama del procés de creació d'un programa informàtic: des del codi font fins a l'executable.</p>
-          </div>
-      </div>
-  </section>
-
-  <section class="conclusion">
-      <div class="container">
-          <h2>Conclusió</h2>
-          <p>El desenvolupament d'un programa informàtic és un procés complex que implica diferents etapes, des de la creació del codi font fins a la generació de l'arxiu executable. Cadascun d'aquests passos és fonamental per assegurar que el programa sigui funcional i eficient. Entendre els conceptes de codi font, codi objecte i executable és clau per a qualsevol programador que vulgui comprendre el funcionament intern dels seus programes.</p>
+          <div class="concept">
+            <h2>Procés de Desenvolupament d'un Programa Informàtic</h2>
+            <p>El procés de creació d'un programa informàtic segueix diverses etapes que inclouen el desenvolupament, la compilació i l'enllaç. A continuació, es detallen aquestes etapes:</p>
+            <ol>
+                <li><strong>Escriure el codi font:</strong> El programador crea el codi font que defineix la lògica del programa.</li>
+                <li><strong>Compilació:</strong> El compilador converteix el codi font en codi objecte. Aquesta etapa detecta errors sintàctics o lògics en el codi font.</li>
+                <li><strong>Enllaç (Linking):</strong> Els arxius de codi objecte es combinen amb llibreries externes per generar un programa complet.</li>
+                <li><strong>Creació de l'executable:</strong> El codi objecte es converteix en un fitxer executable que pot ser executat pel sistema operatiu.</li>
+            </ol>
+            <p>Un cop completat el procés, el programa està llest per ser distribuït i executat pels usuaris.</p>
+        </div>
       </div>
   </section>
 
   </main>
+
+
+
+
+
+
+
+
+
+
 
   <footer id="footer" class="footer dark-background">
 
